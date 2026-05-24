@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 import java.time.LocalDate;
 
-@Table("DIPENDENTE") // Opzionale se il nome della classe coincide con la tabella
+@Table("DIPENDENTE")
 public class Dipendente {
 
     @Id
@@ -12,17 +12,19 @@ public class Dipendente {
     private String nome;
     private String cognome;
     private String codiceFiscale;
-    private Genere genere;
+    private String genere; // Convertito da Genere (Enum) a String
     private LocalDate dataDiNascita;
     private String luogoNascita;
+    private String contatto; 
     private String titoloStudio;
     private String ruoloAziendale;
 
-    // Costruttore vuoto, pieno, getter e setter
+    // Costruttore vuoto
     public Dipendente() {}
 
-    public Dipendente(Long id, String nome, String cognome, String codiceFiscale, Genere genere, 
-                      LocalDate dataDiNascita, String luogoNascita, String titoloStudio, String ruoloAziendale) {
+    // Costruttore pieno
+    public Dipendente(Long id, String nome, String cognome, String codiceFiscale, String genere, 
+                      LocalDate dataDiNascita, String luogoNascita, String contatto, String titoloStudio, String ruoloAziendale) {
         this.id = id;
         this.nome = nome;
         this.cognome = cognome;
@@ -30,10 +32,12 @@ public class Dipendente {
         this.genere = genere;
         this.dataDiNascita = dataDiNascita;
         this.luogoNascita = luogoNascita;
+        this.contatto = contatto;
         this.titoloStudio = titoloStudio;
         this.ruoloAziendale = ruoloAziendale;
     }
 
+    // Getter e Setter
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -46,14 +50,17 @@ public class Dipendente {
     public String getCodiceFiscale() { return codiceFiscale; }
     public void setCodiceFiscale(String codiceFiscale) { this.codiceFiscale = codiceFiscale; }
 
-    public Genere getGenere() { return genere; }
-    public void setGenere(Genere genere) { this.genere = genere; }
+    public String getGenere() { return genere; }
+    public void setGenere(String genere) { this.genere = genere; }
 
     public LocalDate getDataDiNascita() { return dataDiNascita; }
     public void setDataDiNascita(LocalDate dataDiNascita) { this.dataDiNascita = dataDiNascita; }
 
     public String getLuogoNascita() { return luogoNascita; }
     public void setLuogoNascita(String luogoNascita) { this.luogoNascita = luogoNascita; }
+
+    public String getContatto() { return contatto; }
+    public void setContatto(String contatto) { this.contatto = contatto; }
 
     public String getTitoloStudio() { return titoloStudio; }
     public void setTitoloStudio(String titoloStudio) { this.titoloStudio = titoloStudio; }
