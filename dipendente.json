@@ -1,10 +1,10 @@
 {
-  "nome": "ugo",
-  "cognome": "Rossiz",
-  "codiceFiscale": "RSSMRA80g01F205Z",
+  "nome": "Mario",
+  "cognome": "Rossi",
+  "codiceFiscale": "RSSMRA80A01F205Z",
   "genere": "MASCHIO",
   "dataDiNascita": "1980-01-01",
   "luogoNascita": "Napoli",
-  "titoloStudio": "Laurea in Ingeneria",
+  "titoloStudio": "Laurea in Informatica",
   "ruoloAziendale": "Software Engineer"
 }
